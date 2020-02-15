@@ -95,6 +95,10 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_picasso
+TARGET_RECOVERY_DEVICE_MODULES := libinit_picasso
+
 # Partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system product system_ext
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
