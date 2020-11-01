@@ -32,10 +32,12 @@ import androidx.preference.SwitchPreference;
 public class DevicePreferenceFragment extends PreferenceFragment {
     private static final String OVERLAY_NO_FILL_PACKAGE = "org.lineageos.overlay.notch.nofill";
 
+    private static final String KEY_MIN_REFRESH_RATE = "pref_min_refresh_rate";
     private static final String KEY_PILL_STYLE_NOTCH = "pref_pill_style_notch";
 
     private IOverlayManager mOverlayService;
 
+    private ListPreference mPrefMinRefreshRate;
     private SwitchPreference mPrefPillStyleNotch;
 
     @Override
@@ -48,6 +50,8 @@ public class DevicePreferenceFragment extends PreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.device_prefs);
+        mPrefMinRefreshRate = (ListPreference) findPreference(KEY_MIN_REFRESH_RATE);
+        mPrefMinRefreshRate.setOnPreferenceChangeListener(PrefListener);
         mPrefPillStyleNotch = (SwitchPreference) findPreference(KEY_PILL_STYLE_NOTCH);
         mPrefPillStyleNotch.setOnPreferenceChangeListener(PrefListener);
     }
@@ -59,6 +63,10 @@ public class DevicePreferenceFragment extends PreferenceFragment {
     }
 
     private void updateValuesAndSummaries() {
+        final float refreshRate = Settings.System.getFloat(getContext().getContentResolver(),
+            Settings.System.MIN_REFRESH_RATE, 120.0f);
+        mPrefMinRefreshRate.setValue(((int) refreshRate) + " Hz");
+        mPrefMinRefreshRate.setSummary(mPrefMinRefreshRate.getValue());
         try {
             mPrefPillStyleNotch.setChecked(
                 !mOverlayService.getOverlayInfo(OVERLAY_NO_FILL_PACKAGE, 0).isEnabled());
@@ -73,7 +81,11 @@ public class DevicePreferenceFragment extends PreferenceFragment {
             public boolean onPreferenceChange(Preference preference, Object value) {
                 final String key = preference.getKey();
 
-                if (KEY_PILL_STYLE_NOTCH.equals(key)) {
+                if (KEY_MIN_REFRESH_RATE.equals(key)) {
+                    Settings.System.putFloat(getContext().getContentResolver(),
+                        Settings.System.MIN_REFRESH_RATE,
+                        (float) Integer.parseInt((String) value));
+                } else if (KEY_PILL_STYLE_NOTCH.equals(key)) {
                     try {
                         mOverlayService.setEnabled(
                             OVERLAY_NO_FILL_PACKAGE, !(boolean) value, 0);
