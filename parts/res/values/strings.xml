@@ -18,6 +18,10 @@
     <string name="device_pill_style_notch">Black-hole notch</string>
     <string name="msg_device_need_restart">Please, restart systemUI for this to take effect.</string>
 
+    <!-- DT2W -->
+    <string name="dt2w_enable_title">Double-tap to wake </string>
+    <string name="dt2w_enable_summary">Double-tap on lockscreen to wake device</string>
+
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>
     <string name="thermal_summary">Adjust per-app thermal profiles for optimum performance.</string>
