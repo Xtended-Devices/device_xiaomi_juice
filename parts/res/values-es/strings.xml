@@ -16,7 +16,11 @@
     <string name="device_specific_settings_summary">Ajustes específicos de Redmi K30 5G.</string>
     <string name="device_min_refresh_rate">Tasa de refresco</string>
     <string name="device_pill_style_notch">Doble agujero</string>
-    <string name="msg_device_need_restart">Por favor, reinicia para hacer efectivo este ajuste.</string>
+    <string name="msg_device_need_restart">Por favor, reinicia la interfaz del sistema para hacer efectivo este ajuste.</string>
+
+     <!--  DT2W    -->
+    <string name="dt2w_enable_title">Doble toque para despertar</string>
+    <string name="dt2w_enable_summary">Toca dos veces cualquier punto de la pantalla para activar el dispositivo.</string>
 
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>
