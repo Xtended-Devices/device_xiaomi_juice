@@ -22,16 +22,7 @@
     <string name="device_pill_style_notch">검은 배경 노치</string>
     <string name="msg_device_need_restart">설정을 반영하려면 기기를 다시 시작하세요.</string>
 
-    <!-- Thermal Profiles -->
-    <string name="thermal_title">열 프로필</string>
-    <string name="thermal_summary">최적의 성능을 위해 앱별로 열 프로필을 지정합니다. 커널에서 지원해야 합니다.</string>
-    <string name="thermal_default">기본값</string>
-    <string name="thermal_benchmark">벤치마크</string>
-    <string name="thermal_browser">브라우저</string>
-    <string name="thermal_camera">카메라</string>
-    <string name="thermal_dialer">다이얼</string>
-    <string name="thermal_gaming">게임</string>
-    <string name="thermal_youtube">Youtube</string>
+
 
     <!-- Dirac settings -->
     <string name="dirac_title">Mi 사운드 강화</string>
@@ -73,4 +64,15 @@
     <string name="dirac_preset_country">컨트리</string>
     <string name="dirac_preset_dance">댄스</string>
     <string name="dirac_preset_metal">메탈</string>
+
+    <!-- Thermal Profiles -->
+    <string name="thermal_title">열 프로필</string>
+    <string name="thermal_summary">최적의 성능을 위해 앱별로 열 프로필을 지정합니다. 커널에서 지원해야 합니다.</string>
+    <string name="thermal_default">기본값</string>
+    <string name="thermal_benchmark">벤치마크</string>
+    <string name="thermal_browser">브라우저</string>
+    <string name="thermal_camera">카메라</string>
+    <string name="thermal_dialer">다이얼</string>
+    <string name="thermal_gaming">게임</string>
+    <string name="thermal_youtube">Youtube</string>
 </resources>
