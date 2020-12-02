@@ -36,7 +36,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        if (DEBUG) Log.d(TAG, "Received boot completed intent");
         DiracUtils.initialize(context);
     //Micro-Service to restore sata of dt2w on reboot
     SharedPreferences prefs = context.getSharedPreferences(SHAREDD2TW, Context.MODE_PRIVATE);
