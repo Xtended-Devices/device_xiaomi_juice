@@ -16,6 +16,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     vendor.camera.aux.packagelist=org.mokee.snap,org.codeaurora.snapcam
 
+# Disable privapp-permissions whitelist
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.control_privapp_permissions=log
+
 # Display
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.sf.enable_hwc_vds=1 \
