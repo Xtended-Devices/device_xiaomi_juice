@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mokee_lmi.mk
+    $(LOCAL_DIR)/lineage_lmi.mk

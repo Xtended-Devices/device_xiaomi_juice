@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.popupcamera;
+package org.lineageos.settings.popupcamera;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.fod;
+package org.lineageos.settings.fod;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;

@@ -14,7 +14,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Camera
 PRODUCT_PRODUCT_PROPERTIES += \
-    vendor.camera.aux.packagelist=org.mokee.snap,org.codeaurora.snapcam
+    vendor.camera.aux.packagelist=org.lineageos.snap,org.codeaurora.snapcam
 
 # Disable privapp-permissions whitelist
 PRODUCT_PRODUCT_PROPERTIES += \

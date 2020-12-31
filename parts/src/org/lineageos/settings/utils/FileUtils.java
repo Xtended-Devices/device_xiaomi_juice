@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.mokee.settings.utils;
+package org.lineageos.settings.utils;
 
 import android.util.Log;
 

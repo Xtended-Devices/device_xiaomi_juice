@@ -23,7 +23,7 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-mokee
+    $(LOCAL_PATH)/overlay-lineage
 
 # Overlays -- Override vendor ones
 PRODUCT_PACKAGES += \
@@ -82,10 +82,10 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    mokee.biometrics.fingerprint.inscreen@1.0-service.xiaomi_lmi
+    lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_lmi
 
 PRODUCT_COPY_FILES += \
-    vendor/mokee/config/permissions/vendor.mokee.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.mokee.biometrics.fingerprint.inscreen.xml
+    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # Fstab
 PRODUCT_COPY_FILES += \
@@ -105,7 +105,7 @@ PRODUCT_BOOT_JARS += \
 
 # Livedisplay
 PRODUCT_PACKAGES += \
-    mokee.livedisplay@2.0-service-sdm
+    lineage.livedisplay@2.0-service-sdm
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -146,7 +146,7 @@ PRODUCT_COPY_FILES += \
 
 # Trust HAL
 PRODUCT_PACKAGES += \
-    mokee.trust@1.0-service
+    lineage.trust@1.0-service
 
 # WiFi
 PRODUCT_PACKAGES += \
