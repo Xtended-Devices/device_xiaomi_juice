@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2020 The LineageOS Project
+     Copyright (C) 2018 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,38 +15,18 @@
      limitations under the License.
 -->
 <resources>
-    <string-array name="popupcamera_effects_entries">
-        <item>@string/action_none</item>
-        <item>@string/popup_sound_muqin</item>
-        <item>@string/popup_sound_yingyan</item>
-        <item>@string/popup_sound_mofa</item>
-        <item>@string/popup_sound_jijia</item>
-        <item>@string/popup_sound_chilun</item>
-        <item>@string/popup_sound_cangmen</item>
+    <string-array name="device_refresh_rates">
+        <item>30 Hz</item>
+        <item>50 Hz</item>
+        <item>60 Hz</item>
+        <item>90 Hz</item>
+        <item>120 Hz</item>
     </string-array>
-
-    <string-array name="popupcamera_effects_names" translatable="false">
-        <item>popup_muqin_up.ogg</item>
-        <item>popup_muqin_down.ogg</item>
-        <item>popup_yingyan_up.ogg</item>
-        <item>popup_yingyan_down.ogg</item>
-        <item>popup_mofa_up.ogg</item>
-        <item>popup_mofa_down.ogg</item>
-        <item>popup_jijia_up.ogg</item>
-        <item>popup_jijia_down.ogg</item>
-        <item>popup_chilun_up.ogg</item>
-        <item>popup_chilun_down.ogg</item>
-        <item>popup_cangmen_up.ogg</item>
-        <item>popup_cangmen_down.ogg</item>
-    </string-array>
-
-    <string-array name="popupcamera_effects_values">
-        <item>-1</item>
+    <string-array name="device_refresh_rates_val">
         <item>0</item>
+        <item>1</item>
         <item>2</item>
+        <item>3</item>
         <item>4</item>
-        <item>6</item>
-        <item>8</item>
-        <item>10</item>
     </string-array>
 </resources>

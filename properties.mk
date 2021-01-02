@@ -20,10 +20,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
-# Display
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    debug.sf.enable_hwc_vds=1 \
-    ro.sf.lcd_density=440
 
 # IMS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -31,10 +27,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1
 
-# Live Blur
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.blurs_are_expensive=1 \
-    ro.surface_flinger.supports_background_blur=1
 
 # Telephony
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -43,3 +35,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Vendor
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.qti.va_aosp.support=1
+
+
+    # Graphics
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \    
+    debug.sf.disable_backpressure=1 \
+    debug.sf.enable_hwc_vds=1 \
+    dev.pm.dyn_samplingrate=1 \
+    persist.sys.force_sw_gles=1 \
+    ro.kernel.qemu.gles=0 \
+    ro.opengles.version=196610 

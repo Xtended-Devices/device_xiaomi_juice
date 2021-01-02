@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/lmi/lmi-vendor.mk)
+$(call inherit-product, vendor/xiaomi/picasso/picasso-vendor.mk)
 
 # Inherit properties
 include $(LOCAL_PATH)/properties.mk
@@ -35,7 +35,7 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    device/xiaomi/lmi \
+    device/xiaomi/picasso \
     hardware/xiaomi \
     vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
     vendor/qcom/opensource/commonsys/system/bt/conf
@@ -80,16 +80,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     hardware/interfaces/camera/provider/2.4/default/android.hardware.camera.provider@2.4-service_64.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/android.hardware.camera.provider@2.4-service_64.rc
 
-# Fastbootd
+# Display/Graphics
+PRODUCT_PACKAGES += \
+    libdisplayconfig \
+    libvulkan \
+    vendor.display.config@1.0
+    
+    # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_lmi
-
-PRODUCT_COPY_FILES += \
-    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # Fstab
 PRODUCT_COPY_FILES += \
@@ -100,6 +100,10 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
 
+# HotwordEnrollement
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+    
 # IFAA manager
 PRODUCT_PACKAGES += \
     org.ifaa.android.manager
@@ -107,10 +111,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     org.ifaa.android.manager
 
-# Livedisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service-sdm
 
+# Input
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc \
+    $(LOCAL_PATH)/idc/uinput-goodix.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-goodix.idc
+
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
+    $(LOCAL_PATH)/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
+    
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -118,17 +129,18 @@ PRODUCT_PACKAGES += \
     Tag \
     SecureElement
 
-# Parts
+# Overlay - notch style
+PRODUCT_PACKAGES += \
+    NotchNoFillOverlay
+    
+    # Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service.lmi
+
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.qcom.post_boot.sh \
     init.qcom.rc \
     init.recovery.qcom.rc
 
