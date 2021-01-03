@@ -14,7 +14,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Camera
 PRODUCT_PRODUCT_PROPERTIES += \
-    vendor.camera.aux.packagelist=org.lineageos.snap,org.codeaurora.snapcam
+    vendor.camera.aux.packagelist=org.lineageos.snap,org.codeaurora.snapcam,com.google.android.GoogleCamera
 
 # Disable privapp-permissions whitelist
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -37,11 +37,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.qti.va_aosp.support=1
 
 
-    # Graphics
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \    
+# Graphics
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
     debug.sf.enable_hwc_vds=1 \
     dev.pm.dyn_samplingrate=1 \
     persist.sys.force_sw_gles=1 \
     ro.kernel.qemu.gles=0 \
-    ro.opengles.version=196610 
+    ro.opengles.version=196610
