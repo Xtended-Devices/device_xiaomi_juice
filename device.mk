@@ -139,7 +139,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
-
+#Powerstats
+PRODUCT_PACKAGES += \
+    android.hardware.power.stats@1.0-service.mock
 
 # Ramdisk
 PRODUCT_PACKAGES += \
