@@ -25,6 +25,10 @@ include $(LOCAL_PATH)/system.prop
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
+# APN
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
