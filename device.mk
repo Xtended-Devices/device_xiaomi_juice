@@ -21,7 +21,6 @@ $(call inherit-product, vendor/xiaomi/picasso/picasso-vendor.mk)
 # Inherit properties
 include $(LOCAL_PATH)/properties.mk
 
-include $(LOCAL_PATH)/system.prop
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
