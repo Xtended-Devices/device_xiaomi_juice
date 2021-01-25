@@ -1,1 +1,35 @@
 type qti_init_shell_exec, exec_type, vendor_file_type, file_type;
+
+# data
+type display_data_file, data_file_type, core_data_file_type, file_type;
+
+# firmware
+type adsprpcd_file, file_type;
+type bt_firmware_file, file_type;
+type firmware_file, file_type;
+type persist_file, file_type;
+
+#NNHAL files
+type hal_neuralnetworks_data_file, file_type, data_file_type;
+
+# socket
+type sysfs_battery_supply, sysfs_type, fs_type;
+type sysfs_usb_supply, sysfs_type, fs_type;
+type pps_socket, file_type;
+
+#sysfs
+type sysfs_device_info, sysfs_type, fs_type;
+type sysfs_mmc_host, fs_type, sysfs_type;
+type sysfs_tp_fodstatus, sysfs_type, fs_type;
+
+#SurfaceFlinger file type for sysfs access
+type sysfs_graphics, sysfs_type, fs_type;
+
+# kgsl file type for sysfs access
+type sysfs_kgsl, sysfs_type, fs_type;
+
+# Files accessed by qcom-system-daemon
+type sysfs_soc, sysfs_type, fs_type;
+
+# Wifi Data file
+type wifi_vendor_data_file, file_type, data_file_type;

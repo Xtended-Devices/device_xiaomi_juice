@@ -5,3 +5,23 @@
 /(product|system/product)/vendor_overlay/[0-9]+/etc(/.*)?        u:object_r:vendor_configs_file:s0
 /(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/soundfx(/.*)?     u:object_r:vendor_file:s0
 /(product|system/product)/vendor_overlay/[0-9]+/overlay(/.*)?    u:object_r:vendor_overlay_file:s0
+
+# Executables
+/data/vendor/metadata_apex(/.*)?              u:object_r:apex_metadata_file:s0
+/data/vendor/metadata_apex/sessions(/.*)?     u:object_r:apex_metadata_file:s0
+
+# Files in rootfs
+/bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
+/dsp(/.*)?               u:object_r:adsprpcd_file:s0
+/firmware(/.*)?          u:object_r:firmware_file:s0
+/persist(/.*)?           u:object_r:persist_file:s0
+/system/bin/init\.class_main\.sh u:object_r:qti_init_shell_exec:s0
+
+
+# Device Info
+/sys/class/thermal/thermal_zone0/temp          u:object_r:sysfs_device_info:s0
+/sys/class/power_supply/battery/temp           u:object_r:sysfs_device_info:s0
+/sys/kernel/gpu/gpu_clock                      u:object_r:sysfs_device_info:s0
+/sys/kernel/gpu/gpu_busy                       u:object_r:sysfs_device_info:s0
+
+/(system_ext|system/system_ext)/bin/dpmd             u:object_r:dpmd_system_ext_exec:s0
