@@ -157,6 +157,7 @@ PRODUCT_PACKAGES += \
 #Powerstats
 PRODUCT_PACKAGES += \
     android.hardware.power.stats@1.0-service.mock
+ #   android.hardware.power@1.0-service
 
 # Ramdisk
 PRODUCT_PACKAGES += \

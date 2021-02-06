@@ -22,5 +22,50 @@ ro.netflix.bsp_rev=Q7250-19133-1
 
 persist.vendor.dpm.feature=11
 
+#Gboard
+ro.com.google.ime.kb_pad_port_l=7
+ro.com.google.ime.kb_pad_port_r=7
+ro.com.google.ime.kb_pad_land_l=14
+ro.com.google.ime.kb_pad_land_r=14
+
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.latch_unsignaled=1 \
+    debug.sf.enable_hwc_vds=1 \
+    debug.cpurend.vsync=false
+
+# Memory optimizations
+ro.vendor.qti.sys.fw.bservice_enable=true
+
+# Subsystem ramdump
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# USB debugging
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
 
 
+# Netmgr
+persist.vendor.data.iwlan.enable=true
+persist.vendor.data.mode=concurrent
+
+# Media
+media.aac_51_output_enabled=true
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+debug.stagefright.ccodec=1
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+media.stagefright.thumbnail.prefer_hw_codecs=true
+mm.enable.smoothstreaming=true
+mmp.enable.3g2=true
+persist.mm.enable.prefetch=true
+persist.vendor.sensors.enable.mag_filter=true
+qcom.hw.aac.encoder=true
+ro.media.recorder-max-base-layer-fps=60
+vendor.mm.enable.qcom_parser=16777215

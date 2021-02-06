@@ -24,4 +24,3 @@
 /sys/kernel/gpu/gpu_clock                      u:object_r:sysfs_device_info:s0
 /sys/kernel/gpu/gpu_busy                       u:object_r:sysfs_device_info:s0
 
-/(system_ext|system/system_ext)/bin/dpmd             u:object_r:dpmd_system_ext_exec:s0
