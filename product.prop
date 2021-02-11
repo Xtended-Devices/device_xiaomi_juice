@@ -19,3 +19,5 @@ dalvik.vm.dex2oat64.enabled=true
 
 # Smart fps switching
 ro.vendor.smart_dfps.enable=false
+
+ro.control_privapp_permissions=log
