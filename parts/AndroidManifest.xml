@@ -3,7 +3,6 @@
     package="org.lineageos.settings"
     android:versionCode="2"
     android:versionName="2.0"
->>>>>>> 00b7f3a3... picasso: Add per-app Refresh rate control
     android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.DEVICE_POWER" />
