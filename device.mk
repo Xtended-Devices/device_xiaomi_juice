@@ -34,8 +34,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # APN
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -53,9 +53,9 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/picasso \
-    hardware/xiaomi \
-    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
-    vendor/qcom/opensource/commonsys/system/bt/conf
+    hardware/xiaomi
+  #  vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
+  #  vendor/qcom/opensource/commonsys/system/bt/conf
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
@@ -88,7 +88,15 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    BluetoothQti
+    com.qualcomm.qti.bluetooth_audio@1.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.btconfigstore@2.0
+
+PRODUCT_PACKAGES += \
+    libbluetooth_qti \
+    libbtconfigstore \
+    bt_configstore.conf
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -180,7 +188,8 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
    # $(LOCAL_PATH)/configs/privapp-permissions-platform.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-platform.xml \
-    $(LOCAL_PATH)/configs/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
+    $(LOCAL_PATH)/configs/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/com.android.carrierconfig.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.carrierconfig.xml
 
 # Trust HAL
 PRODUCT_PACKAGES += \
@@ -216,3 +225,11 @@ PRODUCT_PACKAGES += \
 # Power
 #PRODUCT_PACKAGES += \
 #    android.hardware.power-service.picasso
+
+# Configstore
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.capabilityconfigstore@1.0
+
+# Component overrides
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/component-overrides_qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/component-overrides.xml

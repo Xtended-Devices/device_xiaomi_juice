@@ -128,3 +128,10 @@ persist.vendor.data.mode=concurrent
 #system props for time-services
 persist.timed.enable=true
 
+# Bluetooth
+ro.bluetooth.library_name=libbluetooth_qti.so
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
