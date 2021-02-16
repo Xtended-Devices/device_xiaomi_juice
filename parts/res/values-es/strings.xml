@@ -14,7 +14,11 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="device_specific_settings_title">XiaomiParts</string>
     <string name="device_specific_settings_summary">Ajustes específicos de Redmi K30 5G.</string>
+    <string name="device_refresh_rate">TASA DE REFRESCO DE LA PANTALLA</string>
+    <string name="device_cutout">NOTCH</string>
     <string name="device_min_refresh_rate">Tasa de refresco</string>
+    <string name="device_power_save_refresh_rate">Tasa de refresco con ahorro de batería</string>
+    <string name="device_power_save_refresh_rate_switch">Disminuye automáticamente la tasa de refresco cuando se activa el ahorro de batería.</string>
     <string name="device_pill_style_notch">Doble agujero</string>
     <string name="msg_device_need_restart">Por favor, reinicia la interfaz del sistema para hacer efectivo este ajuste.</string>
 
@@ -73,4 +77,15 @@
     <string name="thermal_dialer">Llamadas</string>
     <string name="thermal_gaming">Gaming</string>
     <string name="thermal_youtube">YouTube</string>
+
+    <!-- Refresh Rates -->
+    <string name="fps_title">Tasa de refresco por aplicación</string>
+    <string name="fps_summary">Ajusta la tasa de refresco para cada aplicación</string>
+    <string name="fps_120">120 hz</string>
+    <string name="fps_90">90 hz</string>
+    <string name="fps_60">60 hz</string>
+    <string name="fps_30">30 hz</string>
+
+     <!-- Dirac QS tile -->
+    <string name="dirac_qs_tile_title">Mi Sound Enhancer</string>
 </resources>
