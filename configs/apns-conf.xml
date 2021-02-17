@@ -98,7 +98,6 @@
         type="mms"
         protocol="IPV4V6"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="Vf Internet"
@@ -264,7 +263,6 @@
         mvno_match_data="中国电信"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="CTNET"
@@ -750,12 +748,12 @@
     />
 
     <apn carrier="Orange BE IMS"
-        mcc="206"
-        mnc="10"
-        apn="ims"
-        type="ims"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
+      mcc="206"
+      mnc="10"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
     />
 
     <apn carrier="BASE Internet"
@@ -887,20 +885,6 @@
         mmsc="http://mms.orange.fr"
         protocol="IP"
         roaming_protocol="IP"
-        network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|19|20"
-        read_only="true"
-    />
-
-    <apn carrier="Orange World"
-        mcc="208"
-        mnc="01"
-        apn="vowifiorange"
-        type="mms"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
-        mmsc="http://mms.orange.fr"
-        network_type_bitmask="18"
-        read_only="true"
     />
 
     <apn carrier="Orange entreprises"
@@ -914,7 +898,6 @@
         proxy="172.16.2.8"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="VM MMS"
@@ -1745,7 +1728,6 @@
         type="default"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="Orange MMS"
@@ -1761,7 +1743,6 @@
         authtype="1"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="Orange Internet PC"
@@ -1774,7 +1755,6 @@
         authtype="1"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="Orange IMS"
@@ -2132,7 +2112,6 @@
         type="ims"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="Tuenti"
@@ -2398,7 +2377,6 @@
         type="ims"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="Internet"
@@ -2790,7 +2768,6 @@
         type="mms"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
         network_type_bitmask ="18"
     />
 
@@ -3093,7 +3070,6 @@
     mmsproxy="10.0.5.19"
     mmsport="8080"
     type="mms"
-    read_only="true"
   />
   <apn carrier="T-Mobile Internet"
     mcc="220"
@@ -3104,7 +3080,6 @@
     proxy="10.0.5.19"
     port="8080"
     type="default,supl"
-    read_only="true"
   />
     <apn carrier="Vip GPRS"
         apn="vipmobile"
@@ -3214,7 +3189,6 @@
         type="ims"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
         mvno_type="iccid"
         mvno_match_data="8991840,8991854,8991855,8991856,8991857,8991858,8991859,899186,
                        8991870,8991871,8991872,8991873,8991874"
@@ -4066,7 +4040,6 @@
         user="mms"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="Orange RO IMS"
@@ -4278,7 +4251,6 @@
         authtype="1"
         protocol="IPV4V6"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="IMS"
@@ -4338,7 +4310,14 @@
         authtype="1"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
+    />
+
+    <apn carrier="IMS"
+        mcc="230"
+        mnc="03"
+        apn="ims"
+        protocol="IP"
+        type="ims"
     />
 
     <apn carrier="IMS"
@@ -4960,7 +4939,6 @@
         authtype="1"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="O2 Pay As You Go"
@@ -4976,7 +4954,6 @@
         roaming_protocol="IPV4V6"
         mvno_type="gid"
         mvno_match_data="99FFFF"
-        read_only="true"
     />
 
     <apn carrier="O2 Pay As You Go"
@@ -4992,7 +4969,6 @@
         roaming_protocol="IPV4V6"
         mvno_type="gid"
         mvno_match_data="61FFFF"
-        read_only="true"
     />
 
     <apn carrier="O2 Pay As You Go"
@@ -5008,7 +4984,6 @@
         roaming_protocol="IPV4V6"
         mvno_type="gid"
         mvno_match_data="67FFFF"
-        read_only="true"
     />
 
     <apn carrier="O2 Pay As You Go"
@@ -5024,7 +4999,6 @@
         roaming_protocol="IPV4V6"
         mvno_type="gid"
         mvno_match_data="85FFFF"
-        read_only="true"
     />
 
     <apn carrier="TESCO"
@@ -5039,7 +5013,6 @@
         roaming_protocol="IP"
         mvno_match_data="0AFFFF"
         mvno_type="gid"
-        read_only="true"
     />
 
     <apn carrier="giffgaff"
@@ -5054,7 +5027,6 @@
         roaming_protocol="IP"
         mvno_type="gid"
         mvno_match_data="508FFFFFFFF"
-        read_only="true"
     />
 
     <apn carrier="IMS"
@@ -5136,7 +5108,6 @@
         type="default,supl,mms"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="Pay as You Go/VOXI Data"
@@ -5152,7 +5123,6 @@
         type="default,supl,mms"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="Vodafone UK IMS"
@@ -5758,7 +5728,6 @@
         apn="mms"
         authtype="1"
         type="mms"
-        read_only="true"
     />
 
     <apn carrier="3"
@@ -5871,34 +5840,33 @@
         roaming_protocol="IP"
     />
 
-    <apn carrier="Internet"
+    <apn carrier="3"
         mcc="238"
         mnc="06"
         apn="data.tre.dk"
+        mmsc="http://mms.3.dk/"
+        mmsport="8799"
+        mmsproxy="mmsproxy.3.dk"
         type="default,supl,mms"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
     />
 
-    <apn carrier="mms"
+    <apn carrier="MMS"
         mcc="238"
         mnc="06"
-        apn="data.tre.dk/services"
-        mmsproxy="mmsproxy.3.dk"
+        apn="data.tre.dk"
+        mmsproxy="172.16.53.12"
         mmsport="8799"
         mmsc="http://mms.3.dk"
         type="mms"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
     />
 
-    <apn carrier="ims"
+    <apn carrier="IMS"
         mcc="238"
         mnc="06"
         apn="ims"
         type="ims"
         protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
+        roaming_protocol="IP"
     />
 
     <apn carrier="TDC"
@@ -6696,6 +6664,7 @@
         protocol="IPV4V6"
         roaming_protocol="IP"
     />
+
     <apn carrier="IMS"
         mcc="242"
         mnc="14"
@@ -6704,6 +6673,7 @@
         protocol="IPV6"
         roaming_protocol="IPV6"
     />
+
     <apn carrier="DNA Internet"
         mcc="244"
         mnc="03"
@@ -8014,15 +7984,6 @@
         roaming_protocol="IP"
     />
 
-    <apn carrier="Orange MD IMS"
-        mcc="259"
-        mnc="01"
-        apn="ims"
-        type="ims"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
-    />
-
     <apn carrier="Orange MMS"
         mcc="259"
         mnc="01"
@@ -8033,7 +7994,6 @@
         type="mms"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="Orange GPRS Modem"
@@ -8043,6 +8003,15 @@
         type="dun"
         protocol="IP"
         roaming_protocol="IP"
+    />
+
+    <apn carrier="Orange MD IMS"
+        mcc="259"
+        mnc="01"
+        apn="ims"
+        type="ims"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 
   <apn carrier="Moldcell Internet"
@@ -8114,7 +8083,7 @@
     <apn carrier="Plus internet"
         mcc="260"
         mnc="01"
-        apn="plus"
+        apn="internet"
         type="default,supl"
         protocol="IP"
         roaming_protocol="IP"
@@ -8208,7 +8177,7 @@
         mvno_match_data="heyah"
     />
 
-    <!--The Orange internet is replaced in TelephonyProvider for special devices-->
+    <!--The internet is replaced in TelephonyProvider for special devices-->
     <apn carrier="Orange Internet"
         mcc="260"
         mnc="03"
@@ -8219,7 +8188,6 @@
         authtype="3"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="Orange MMS"
@@ -8234,7 +8202,6 @@
         user="mms"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="Orange PL IMS"
@@ -8471,7 +8438,6 @@
         authtype="3"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="VF DE Event"
@@ -8484,7 +8450,6 @@
         type="mms"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="IMS"
@@ -8702,7 +8667,7 @@
         type="default,supl,mms"
     />
 
-    <apn carrier="Vodafone DE"
+     <apn carrier="Vodafone DE"
         apn="web52.testnetz-vd2.de"
         mcc="262"
         mnc="09"
@@ -8726,7 +8691,7 @@
       protocol="IPV4V6"
       type="ims"
     />
-    <apn carrier="O2"
+    <apn carrier="o2"
         apn="internet"
         mcc="262"
         mnc="11"
@@ -8779,7 +8744,6 @@
         mmsport="80"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="Vodafone Internet"
@@ -8789,7 +8753,6 @@
         type="dun"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="IMS"
@@ -8811,7 +8774,6 @@
         type="default,supl,mms,dun"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="Lycamobile PT"
@@ -9734,6 +9696,8 @@
         mnc="41"
         apn="internet"
         mmsc="http://mms.telekom.si"
+        mmsport="8080"
+        mmsproxy="213.229.249.40"
         password="internet"
         type="default,hipri,dun,supl,mms"
         user="mobitel"
@@ -10450,24 +10414,6 @@
         mmsport="80"
         mmsproxy="mig.sasktel.com"
         type="default,supl,mms"
-    />
-
-    <apn carrier="SPM Telecom"
-        mcc="308"
-        mnc="03"
-        apn="spmtelecom"
-        type="default"
-        protocol="IP"
-        roaming_protocol="IP"
-    />
-
-    <apn carrier="ims"
-        mcc="308"
-        mnc="03"
-        apn="ims"
-        type="ims"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
     />
 
     <!-- United States 美国 -->
@@ -12487,7 +12433,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
 
     <apn carrier="T-Mobile IMS"
@@ -12507,7 +12452,6 @@
         protocol="IP"
         type="dun"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="MetroPCS 160"
         mcc="310"
@@ -12583,7 +12527,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
 
     <apn carrier="T-Mobile IMS"
@@ -12603,7 +12546,6 @@
         mtu="1440"
         protocol="IP"
         type="dun"
-        read_only="true"
     />
     <apn carrier="MetroPCS 200"
         mcc="310"
@@ -12622,7 +12564,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 210 DUN"
         mcc="310"
@@ -12634,7 +12575,6 @@
         mtu="1440"
         protocol="IP"
         type="dun"
-        read_only="true"
     />
     <apn carrier="MetroPCS 210"
         mcc="310"
@@ -12662,7 +12602,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 220 DUN"
         mcc="310"
@@ -12674,7 +12613,6 @@
         mtu="1440"
         protocol="IP"
         type="dun"
-        read_only="true"
     />
     <apn carrier="MetroPCS 220"
         mcc="310"
@@ -12702,7 +12640,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 230 DUN"
         mcc="310"
@@ -12714,7 +12651,6 @@
         mtu="1440"
         protocol="IP"
         type="dun"
-        read_only="true"
     />
     <apn carrier="MetroPCS 230"
         mcc="310"
@@ -12742,7 +12678,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 240 DUN"
         mcc="310"
@@ -12754,7 +12689,6 @@
         mtu="1440"
         protocol="IP"
         type="dun"
-        read_only="true"
     />
     <apn carrier="MetroPCS 240"
         mcc="310"
@@ -12782,7 +12716,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 250 DUN"
         mcc="310"
@@ -12794,7 +12727,6 @@
         mtu="1440"
         protocol="IP"
         type="dun"
-        read_only="true"
     />
     <apn carrier="MetroPCS 250"
         mcc="310"
@@ -12841,7 +12773,6 @@
         roaming_protocol="IP"
         type="default,supl"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 260 DUN"
         mcc="310"
@@ -12853,7 +12784,6 @@
         protocol="IP"
         type="dun"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="T-Mobile US"
         mcc="310"
@@ -12865,7 +12795,6 @@
         protocol="IPV6"
         roaming_protocol="IP"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="MetroPCS"
         mcc="310"
@@ -12876,7 +12805,6 @@
         roaming_protocol="IP"
         mvno_match_data="6D"
         mvno_type="gid"
-        read_only="true"
     />
     <apn carrier="MetroPCS Tethering"
         mcc="310"
@@ -12890,13 +12818,11 @@
         mtu="1440"
         mvno_match_data="6D"
         mvno_type="gid"
-        read_only="true"
     />
     <apn carrier="MetroPCS"
         mcc="310"
         mnc="260"
         apn="tmus"
-        read_only="true"
         server="*"
         mmsc="http://metropcs.mmsmvno.com/mms/wapenc"
         type="mms"
@@ -12913,7 +12839,6 @@
         type="ims"
         protocol="IPV6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
     <apn carrier="MetroPCS (IMS)"
         mcc="310"
@@ -12924,7 +12849,6 @@
         roaming_protocol="IPV4V6"
         mvno_match_data="6D"
         mvno_type="gid"
-        read_only="true"
     />
     <apn carrier="SIMPLE"
         mcc="310"
@@ -12936,7 +12860,6 @@
         mmsc="http://smpl.mms.msg.eng.t-mobile.com/mms/wapenc"
         mvno_type="gid"
         mvno_match_data="534D"
-        read_only="true"
     />
     <apn carrier="TFWAP"
         mcc="310"
@@ -12948,7 +12871,6 @@
         mmsc="http://mms.tracfone.com"
         mvno_type="gid"
         mvno_match_data="deff"
-        read_only="true"
     />
     <apn carrier="TFWAP"
         mcc="310"
@@ -12960,7 +12882,6 @@
         mmsc="http://mms.tracfone.com"
         mvno_type="gid"
         mvno_match_data="ddff"
-        read_only="true"
     />
     <apn carrier="Consumer Cellular"
         mcc="310"
@@ -12976,7 +12897,6 @@
         type="default,mms,supl,hipri"
         mvno_type="gid"
         mvno_match_data="2AC9"
-        read_only="true"
     />
     <apn carrier="T-Mobile IMS"
         mcc="310"
@@ -13016,7 +12936,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 270 DUN"
         mcc="310"
@@ -13028,7 +12947,6 @@
         protocol="IP"
         type="dun"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="MetroPCS 270"
         mcc="310"
@@ -13040,7 +12958,6 @@
         roaming_protocol="IP"
         mvno_match_data="6D"
         mvno_type="gid"
-        read_only="true"
     />
 
     <apn carrier="T-Mobile IMS"
@@ -13065,7 +12982,6 @@
         protocol="IPV6"
         roaming_protocol="IP"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 300 DUN"
         mcc="310"
@@ -13077,7 +12993,6 @@
         protocol="IP"
         type="dun"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="T-Mobile IMS"
         mcc="310"
@@ -13096,7 +13011,6 @@
         roaming_protocol="IP"
         mvno_match_data="6D"
         mvno_type="gid"
-        read_only="true"
     />
     <apn carrier="Truphone"
         mcc="310"
@@ -13124,7 +13038,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 310 DUN"
         mcc="310"
@@ -13136,7 +13049,6 @@
         protocol="IP"
         type="dun"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="MetroPCS 310"
         mcc="310"
@@ -13148,7 +13060,6 @@
         roaming_protocol="IP"
         mvno_match_data="6D"
         mvno_type="gid"
-        read_only="true"
     />
 
     <apn carrier="T-Mobile IMS"
@@ -13959,7 +13870,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
 
     <apn carrier="IMS"
@@ -13979,7 +13889,6 @@
         protocol="IP"
         type="dun"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="MetroPCS 490"
         mcc="310"
@@ -14040,7 +13949,6 @@
         protocol="IPV6"
         roaming_protocol="IP"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 530 DUN"
         mcc="310"
@@ -14052,7 +13960,6 @@
         protocol="IP"
         type="dun"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="T-Mobile IMS"
         mcc="310"
@@ -14129,7 +14036,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 580 DUN"
         mcc="310"
@@ -14141,7 +14047,6 @@
         protocol="IP"
         type="dun"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="MetroPCS 580"
         mcc="310"
@@ -14276,7 +14181,6 @@
         protocol="IPV6"
         roaming_protocol="IP"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 590 DUN"
         mcc="310"
@@ -14288,7 +14192,6 @@
         protocol="IP"
         type="dun"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="MetroPCS 590"
         mcc="310"
@@ -14428,7 +14331,6 @@
         protocol="IPV6"
         roaming_protocol="IP"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 640 DUN"
         mcc="310"
@@ -14439,7 +14341,6 @@
         password="none"
         protocol="IP"
         type="dun"
-        read_only="true"
     />
     <apn carrier="MetroPCS 640"
         mcc="310"
@@ -14465,7 +14366,6 @@
         apn="epc.tmobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 660 DUN"
         mcc="310"
@@ -14477,7 +14377,6 @@
         protocol="IP"
         type="dun"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="MetroPCS 660"
         mcc="310"
@@ -14703,7 +14602,6 @@
         apn="fast.t-mobile.com"
         mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc"
         type="default,supl,mms"
-        read_only="true"
     />
     <apn carrier="T-Mobile US 800 DUN"
         mcc="310"
@@ -14715,7 +14613,6 @@
         protocol="IP"
         type="dun"
         mtu="1440"
-        read_only="true"
     />
     <apn carrier="MetroPCS 800"
         mcc="310"
@@ -19045,7 +18942,6 @@
         mmsport="9201"
         mvno_type="spn"
         mvno_match_data="24-7 Wireless RPT"
-        read_only="true"
     />
     <apn carrier="24-7 WAP Other networks"
         mcc="311"
@@ -19089,7 +18985,6 @@
         mmsport="9201"
         mvno_type="spn"
         mvno_match_data="Mosaic RPT"
-        read_only="true"
     />
     <apn carrier="Mosaic WAP Other networks"
         mcc="311"
@@ -19134,7 +19029,6 @@
         mmsport="9201"
         mvno_type="spn"
         mvno_match_data="Norvado Wireless RPT"
-        read_only="true"
     />
     <apn carrier="Norvado Other networks"
         mcc="311"
@@ -21676,7 +21570,6 @@
         type="ims"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="movistar INTERNET"
@@ -22996,7 +22889,6 @@
         type="default,supl"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="INTERNET CLARO"
@@ -31913,20 +31805,6 @@
         type="mms"
     />
 
-    <apn carrier="Mobily WEB 2"
-        mcc="420"
-        mnc="03"
-        apn="web2"
-        type="default,supl"
-    />
-
-    <apn carrier="Mobily WEB"
-        mcc="420"
-        mnc="03"
-        apn="web1"
-        type="default,supl"
-    />
-
     <apn carrier="Mobily postpaid - GPRS"
         mcc="420"
         mnc="03"
@@ -32612,15 +32490,6 @@
         type="mms"
         mmsproxy="192.80.7.133"
         mmsport="8000"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
-    />
-
-    <apn carrier="ims"
-        mcc="429"
-        mnc="01"
-        apn="ims"
-        type="ims"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
     />
@@ -34631,7 +34500,6 @@
         roaming_protocol="IPV4V6"
         defaultflag="0"
         preferapp=""
-        read_only="true"
     />
 
     <apn carrier="LG uplus Tethering"
@@ -35218,6 +35086,86 @@
         apn="3gnet"
         type="default,supl"
         read_only ="true"
+    />
+
+    <apn carrier="China Unicom (HK)"
+        mcc="454"
+        mnc="07"
+        apn="3gnet"
+        type="default,supl"
+        read_only ="true"
+        mvno_type="imsi"
+        mvno_match_data="454070"
+    />
+
+    <apn carrier="China Unicom (HK)"
+        mcc="454"
+        mnc="07"
+        apn="3gnet"
+        type="default,supl"
+        read_only ="true"
+        mvno_type="imsi"
+        mvno_match_data="454071"
+    />
+
+    <apn carrier="China Unicom (HK)"
+        mcc="454"
+        mnc="07"
+        apn="3gnet"
+        type="default,supl"
+        read_only ="true"
+        mvno_type="imsi"
+        mvno_match_data="454072"
+    />
+
+    <apn carrier="China Unicom (HK)"
+        mcc="454"
+        mnc="07"
+        apn="3gnet"
+        type="default,supl"
+        read_only ="true"
+        mvno_type="imsi"
+        mvno_match_data="454073"
+    />
+
+    <apn carrier="China Unicom (HK)"
+        mcc="454"
+        mnc="07"
+        apn="3gnet"
+        type="default,supl"
+        read_only ="true"
+        mvno_type="imsi"
+        mvno_match_data="454074"
+    />
+
+    <apn carrier="China Unicom (HK)"
+        mcc="454"
+        mnc="07"
+        apn="3gnet"
+        type="default,supl"
+        read_only ="true"
+        mvno_type="imsi"
+        mvno_match_data="454075"
+    />
+
+    <apn carrier="China Unicom (HK)"
+        mcc="454"
+        mnc="07"
+        apn="3gnet"
+        type="default,supl"
+        read_only ="true"
+        mvno_type="imsi"
+        mvno_match_data="454076"
+    />
+
+    <apn carrier="China Unicom (HK)"
+        mcc="454"
+        mnc="07"
+        apn="3gnet"
+        type="default,supl"
+        read_only ="true"
+        mvno_type="imsi"
+        mvno_match_data="454077"
     />
 
     <apn carrier="China Unicom (HK)"
@@ -36389,7 +36337,6 @@
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
         authtype="3"
-        read_only="true"
     />
 
     <apn carrier="China Telecom"
@@ -36399,7 +36346,6 @@
         type="ia"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="APN_NAME_CTWAP"
@@ -36417,7 +36363,6 @@
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
         authtype="3"
-        read_only="true"
     />
 
     <apn carrier="遠傳網際網絡"
@@ -36563,7 +36508,7 @@
     <apn carrier="T Star MMS"
         mcc="466"
         mnc="89"
-        apn="internet"
+        apn="mms"
         mmsc="http://mms.vibo.net.tw"
         mmsproxy="172.24.128.36"
         mmsport="8080"
@@ -37043,15 +36988,6 @@
         type="default,supl,mms"
     />
 
-　　<apn carrier="ims"
-        mcc="502"
-        mnc="18"
-        apn="ims"
-        type="ims"
-        protocol="IPV4V6"
-        roaming_protocol="IP"
-    />
-
     <apn carrier="Celcom 3G"
         mcc="502"
         mnc="19"
@@ -37076,8 +37012,6 @@
         mnc="152"
         apn="yesnet"
         type="default,supl,xcap"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="Yes IMS"
@@ -37085,8 +37019,6 @@
         mnc="152"
         apn="ims"
         type="ims"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="unifi"
@@ -37094,15 +37026,6 @@
         mnc="153"
         apn="unifi"
         type="default"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
-    />
-
-    <apn carrier="IMS"
-        mcc="502"
-        mnc="153"
-        apn="ims"
-        type="ims"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
     />
@@ -37398,18 +37321,22 @@
         mcc="510"
         mnc="09"
         apn="Smartfren4G"
-        type="default,supl"
+        user="smartfren"
+        password="smartfren"
+        authtype="3"
+        type="default,supl,xcap"
         protocol="IPV4V6"
-        roaming_protocol="IP"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="IMS"
         mcc="510"
         mnc="09"
         apn="ims"
+        authtype="3"
         type="ims"
         protocol="IPV4V6"
-        roaming_protocol="IP"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="Telkomsel GPRS WEB"
@@ -37488,18 +37415,20 @@
         mcc="510"
         mnc="28"
         apn="Smartfren4G"
-        type="default,supl"
+        authtype="3"
+        type="default,supl,xcap"
         protocol="IPV4V6"
-        roaming_protocol="IP"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="IMS"
         mcc="510"
         mnc="28"
         apn="ims"
+        authtype="3"
         type="ims"
         protocol="IPV4V6"
-        roaming_protocol="IP"
+        roaming_protocol="IPV4V6"
     />
 
     <apn carrier="Internux"
@@ -40857,7 +40786,6 @@
         type="default,supl"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="MMS.Vodacom"
@@ -40870,7 +40798,6 @@
         type="mms"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
     <apn carrier="IMS.Vodacom"
         mcc="655"
@@ -41904,7 +41831,6 @@
         user="movistar@datos"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="IMS"
@@ -42004,7 +41930,6 @@
         type="default,supl"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
     <apn carrier="IMS"
@@ -42915,7 +42840,6 @@
         user="entelpcs"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="ims"
@@ -42926,6 +42850,7 @@
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
     />
+
     <apn carrier="Movistar INTERNET"
         mcc="730"
         mnc="02"
@@ -42935,7 +42860,6 @@
         user="wap"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="IMS"
@@ -42957,7 +42881,6 @@
         user="clarochile"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="ims"
@@ -42967,7 +42890,6 @@
         type="ims"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="Virgin Internet movil"
@@ -43051,7 +42973,6 @@
         type="default"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="ims"
@@ -43133,7 +43054,6 @@
         type="ims"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
-        read_only="true"
     />
 
     <apn carrier="Movistar INTERNET"
@@ -43282,7 +43202,6 @@
         password="movistar"
         type="default,supl,dun"
         user="movistar"
-        read_only="true"
     />
 
     <apn carrier="movistar MMS"
@@ -43296,7 +43215,6 @@
         password="movistar"
         type="mms"
         user="movistar"
-        read_only="true"
     />
 
     <apn carrier="ims"
@@ -43641,6 +43559,7 @@
         roaming_protocol="IPV4V6"
     />
 
+
     <apn carrier="Internet Claro"
         mcc="740"
         mnc="01"
@@ -43685,40 +43604,8 @@
         type="default,supl"
         protocol="IP"
         roaming_protocol="IP"
-        read_only="true"
     />
 
-    <apn carrier="Movistar INTERNET"
-        mcc="744"
-        mnc="000"
-        apn="internet.movistar.com.ec"
-        type="default"
-        user="movistar"
-        password="movistar"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
-    />
-    <apn carrier="Movistar MMS"
-        mcc="744"
-        mnc="000"
-        apn="mms.movistar.com.ec"
-        mmsc="http://mms.movistar.com.ec:8088/mms/"
-        mmsport="9001"
-        mmsproxy="10.3.5.50"
-        type="mms"
-        user="movistar"
-        password="movistar"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
-    />
-    <apn carrier="IMS"
-        mcc="744"
-        mnc="000"
-        apn="ims"
-        type="ims"
-        protocol="IPV4V6"
-        roaming_protocol="IPV4V6"
-    />
     <apn carrier="VOX INTERNET"
         mcc="744"
         mnc="01"
@@ -43980,5 +43867,14 @@
         mnc="12"
         apn="internet"
         type="default"
+    />
+
+    <apn carrier="DIGI"
+        mcc="214"
+        mnc="22"
+        apn="internet.digimobil.es"
+        type="default"
+        protocol="IPV4V6"
+        roaming_protocol="IPV4V6"
     />
 </apns>
