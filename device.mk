@@ -108,13 +108,25 @@ PRODUCT_COPY_FILES += \
 # Display/Graphics
 PRODUCT_PACKAGES += \
     libdisplayconfig \
+    libqdMetaData \
+    libqdMetaData.system \
     libvulkan \
-    vendor.display.config@1.0
-    
+    vendor.display.config@1.0 \
+    vendor.display.config@1.2 \
+    vendor.display.config@1.3 \
+    vendor.display.config@1.5 \
+    vendor.display.config@2.0 \
+    vendor.qti.hardware.display.composer@3.0
+
     # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
 
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio
 
 # Fstab
 PRODUCT_COPY_FILES += \
@@ -165,7 +177,6 @@ PRODUCT_PACKAGES += \
 #Powerstats
 PRODUCT_PACKAGES += \
     android.hardware.power.stats@1.0-service.mock
- #   android.hardware.power@1.0-service
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -187,7 +198,6 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
-   # $(LOCAL_PATH)/configs/privapp-permissions-platform.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-platform.xml \
     $(LOCAL_PATH)/configs/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/com.android.carrierconfig.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.carrierconfig.xml
 
@@ -198,6 +208,8 @@ PRODUCT_PACKAGES += \
 # WiFi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
+    TelecommResCommon \
+    TelephonyResCommon \
     WifiResCommon
 
 # WiFi Display
@@ -244,3 +256,7 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/ringtones,$(TARGET_COPY_OUT_SYSTEM)/media/audio/ringtones) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/notifications,$(TARGET_COPY_OUT_SYSTEM)/media/audio/notifications) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/ui,$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui)
+
+#manifests
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/android.hardware.graphics.mapper-impl-qti-display.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml \
