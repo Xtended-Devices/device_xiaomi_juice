@@ -62,7 +62,7 @@ TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 # Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
@@ -74,7 +74,13 @@ PRODUCT_BUILD_PRODUCT_IMAGE := true
 
 # ANT+
 PRODUCT_PACKAGES += \
-    AntHalService-Soong
+    AntHalService-Soong \
+    com.dsi.ant.antradio_library \
+    com.dsi.ant@1.0
+
+# Atrace
+PRODUCT_PACKAGES += \
+    android.hardware.atrace@1.0-service
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -181,7 +187,7 @@ PRODUCT_PACKAGES += \
 
 #Powerstats
 PRODUCT_PACKAGES += \
-    android.hardware.power.stats@1.0-service.mock
+    android.hardware.power.stats@1.0-service
 
 # Ramdisk
 PRODUCT_PACKAGES += \
