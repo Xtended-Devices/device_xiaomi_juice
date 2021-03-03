@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2021 The LegionOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -12,10 +13,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/picasso/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+$(call inherit-product, vendor/legion/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := evolution_picasso
+PRODUCT_NAME := legion_picasso
 PRODUCT_DEVICE := picasso
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi K30 5G
