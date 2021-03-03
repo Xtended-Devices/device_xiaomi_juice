@@ -14,3 +14,6 @@ allow init sysfs_memory:file setattr;
 
 allow init hal_fingerprint:process ptrace;
 allow init debugfs_tracing_debug:dir mounton;
+
+# Allow init to write to sysfs_battery_supply
+allow init sysfs_battery_supply:file { setattr };
