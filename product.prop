@@ -1,3 +1,6 @@
+# Audio
+audio.offload.min.duration.secs=30
+
 # Camera
 persist.camera.gyro.disable=0
 persist.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
@@ -5,7 +8,7 @@ persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera
 
 # Telephony
-ro.telephony.default_network=22,22
+ro.telephony.default_network=33,22
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
@@ -21,3 +24,4 @@ dalvik.vm.dex2oat64.enabled=true
 ro.vendor.smart_dfps.enable=false
 
 ro.control_privapp_permissions=log
+

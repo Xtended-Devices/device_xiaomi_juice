@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2021 The LegionOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -19,7 +20,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, vendor/xiaomi/picasso/picasso-vendor.mk)
 
 # Inherit properties
-include $(LOCAL_PATH)/properties.mk
 include $(LOCAL_PATH)/system.prop
 include $(LOCAL_PATH)/product.prop  
 
@@ -52,14 +52,8 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    device/xiaomi/picasso \
-    hardware/xiaomi
-  #  vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
-  #  vendor/qcom/opensource/commonsys/system/bt/conf
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
+    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
+    vendor/qcom/opensource/commonsys/system/bt/conf
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
@@ -105,9 +99,6 @@ PRODUCT_PACKAGES += \
     bt_configstore.conf
 
 # Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 PRODUCT_COPY_FILES += \
     hardware/interfaces/camera/provider/2.4/default/android.hardware.camera.provider@2.4-service_64.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/android.hardware.camera.provider@2.4-service_64.rc
 
@@ -124,7 +115,7 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0 \
     vendor.qti.hardware.display.composer@3.0
 
-    # Fastbootd
+# Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
 
@@ -159,7 +150,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     org.ifaa.android.manager
 
-
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc \
@@ -181,12 +171,8 @@ PRODUCT_PACKAGES += \
 # Overlay - notch style
 PRODUCT_PACKAGES += \
     NotchNoFillOverlay
-    
-    # Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
 
-#Powerstats
+# Powerstats
 PRODUCT_PACKAGES += \
     android.hardware.power.stats@1.0-service
 
@@ -217,14 +203,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
 
-# WiFi
+# Wi-Fi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     TelecommResCommon \
     TelephonyResCommon \
     WifiResCommon
 
-# WiFi Display
+# Wi-Fi Display
 PRODUCT_PACKAGES += \
     libnl
 
@@ -237,18 +223,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/system/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/configs/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 
-# Thermal
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
 
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0
-
-# Power
-#PRODUCT_PACKAGES += \
-#    android.hardware.power-service.picasso
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -260,7 +238,7 @@ PRODUCT_COPY_FILES += \
 
 # Modules
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/modules,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/lib/modules)
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/lib/modules)
 
 #miui ringtones
 PRODUCT_COPY_FILES += \
@@ -269,6 +247,6 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/notifications,$(TARGET_COPY_OUT_SYSTEM)/media/audio/notifications) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/ui,$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui)
 
-#manifests
+# Manifests
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/android.hardware.graphics.mapper-impl-qti-display.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml \

@@ -24,7 +24,7 @@ ro.netflix.bsp_rev=Q7250-19133-1
 
 persist.vendor.dpm.feature=11
 
-#Gboard
+# GBoard
 ro.com.google.ime.kb_pad_port_l=7
 ro.com.google.ime.kb_pad_port_r=7
 ro.com.google.ime.kb_pad_land_l=14
@@ -34,20 +34,20 @@ ro.com.google.ime.kb_pad_land_r=14
 debug.sf.latch_unsignaled=1
 debug.sf.enable_hwc_vds=1
 debug.cpurend.vsync=false
+dev.pm.dyn_samplingrate=1
+ro.opengles.version=196610
 
-#Bringup properties
+# Bringup properties
 persist.sys.force_sw_gles=1
 persist.vendor.radio.atfwd.start=true
 ro.kernel.qemu.gles=0
 qemu.hw.mainkeys=0
 
-#Partition source order for Product/Build properties pickup.
+# Partition source order for Product/Build properties pickup.
 ro.product.property_source_order=odm,vendor,product,system_ext,system
 
-#Battery Property
+# Battery Property
 ro.charger.enable_suspend = 1
-
-
 
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_enable=true
@@ -60,7 +60,6 @@ persist.sys.usb.config=mtp,adb
 ro.adb.secure=0
 ro.secure=0
 ro.debuggable=1
-
 
 # Netmgr
 persist.vendor.data.iwlan.enable=true
@@ -85,50 +84,27 @@ qcom.hw.aac.encoder=true
 ro.media.recorder-max-base-layer-fps=60
 vendor.mm.enable.qcom_parser=16777215
 
-
 persist.sys.watchdog_enhanced=true
 dalvik.vm.dexopt.secondary=true
 debug.sf.disable_backpressure=1
 
-#set vfloat_offset_uv
-#persist.vendor.cp.qc3p5_vfloat_offset_uv=110000
-
-#In the taper mode, low voltage charging
-#persist.vendor.cp.taper_term_mv=7000
-
-#Set fcc_main to 400mA to avoid the risk of vph_pwr droop
-#persist.vendor.cp.fcc_main_ua=400000
-
-#hwui properties
-#ro.hwui.texture_cache_size=72
-#ro.hwui.layer_cache_size=48
-#ro.hwui.r_buffer_cache_size=8
-#ro.hwui.path_cache_size=32
-#ro.hwui.gradient_cache_size=1
-#ro.hwui.drop_shadow_cache_size=6
-#ro.hwui.texture_cache_flushrate=0.4
-#ro.hwui.text_small_cache_width=1024
-#ro.hwui.text_small_cache_height=1024
-#ro.hwui.text_large_cache_width=2048
-#ro.hwui.text_large_cache_height=1024
-
 config.disable_rtt=true
 
-#property to enable HWC for VDS
+# Enable HWC for VDS
 debug.sf.enable_hwc_vds=1
 
-#property to latch unsignaled buffer
+# Latch unsignaled buffer
 debug.sf.latch_unsignaled=1
 
-# system props for the data modules
-#
+# Data modules
 ro.vendor.use_data_netmgrd=true
 persist.vendor.data.mode=concurrent
 
-#system props for time-services
+# Time-services
 persist.timed.enable=true
 
 # Bluetooth
+persist.vendor.bt.a2dp.aac_whitelist=false
 ro.bluetooth.library_name=libbluetooth_qti.so
 
 # IMS
@@ -136,6 +112,5 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
-#Dolby
+# Dolby audio
 vendor.audio.dolby.ds2.enabled=true
-
