@@ -22,6 +22,10 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := K30 5G
 PRODUCT_MANUFACTURER := Xiaomi
 
+# LegionOS maintainter
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.maintainer.name=masemoel
+
 TARGET_BOOT_ANIMATION_RES := 1080
 PRODUCT_CHARACTERISTICS := nosdcard
 
