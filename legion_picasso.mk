@@ -18,8 +18,8 @@ $(call inherit-product, vendor/legion/config/common_full_phone.mk)
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := legion_picasso
 PRODUCT_DEVICE := picasso
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi K30 5G
+PRODUCT_BRAND := Redmi
+PRODUCT_MODEL := K30 5G
 PRODUCT_MANUFACTURER := Xiaomi
 
 TARGET_BOOT_ANIMATION_RES := 1080
