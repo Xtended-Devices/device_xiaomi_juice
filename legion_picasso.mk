@@ -26,6 +26,9 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.maintainer.name=masemoel
 
+# Adds face unlock if package is available on ROM source.
+TARGET_SUPPORT_FACE_UNLOCK := true
+
 TARGET_BOOT_ANIMATION_RES := 1080
 PRODUCT_CHARACTERISTICS := nosdcard
 
