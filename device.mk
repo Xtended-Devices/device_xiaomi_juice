@@ -174,6 +174,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NotchNoFillOverlay
 
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Powerstats
 PRODUCT_PACKAGES += \
     android.hardware.power.stats@1.0-service
