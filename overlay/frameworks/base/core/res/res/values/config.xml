@@ -701,6 +701,8 @@
 
     <!-- Wi-Fi 802.11r support -->
     <bool translatable="false" name="config_wifi_fast_bss_transition_enabled">true</bool>
+
+    <!-- Improve signal reception  -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
 
     <!-- LED -->
