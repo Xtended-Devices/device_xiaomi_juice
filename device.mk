@@ -250,7 +250,7 @@ PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
 
 # VNDK
-BOARD_VNDK_VERSION := current
+PRODUCT_TARGET_VNDK_VERSION := 30
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
