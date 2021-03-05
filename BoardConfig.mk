@@ -66,6 +66,13 @@ TARGET_BOARD_PLATFORM := lito
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno620
 BOARD_USES_QCOM_HARDWARE := true
 
+# A/B status
+AB_OTA_UPDATER := false
+
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
@@ -187,7 +194,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # VNDK
-BOARD_VNDK_VERSION := current
+PRODUCT_TARGET_VNDK_VERSION := 30
 
 # Inherit from the proprietary version
 include vendor/xiaomi/picasso/BoardConfigVendor.mk

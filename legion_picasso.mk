@@ -22,14 +22,14 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := K30 5G
 PRODUCT_MANUFACTURER := Xiaomi
 
-# LegionOS maintainter
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.maintainer.name=masemoel
-
 # Adds face unlock if package is available on ROM source.
 TARGET_SUPPORT_FACE_UNLOCK := true
 
+# Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
-PRODUCT_CHARACTERISTICS := nosdcard
+
+# LegionOS maintainter
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.maintainer.name=masemoel
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

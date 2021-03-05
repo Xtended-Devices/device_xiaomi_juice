@@ -5,64 +5,26 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+# Inherit non-open-source specific aspects
+$(call inherit-product, vendor/xiaomi/picasso/picasso-vendor.mk)
+
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+# MIUI Camera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/picasso/picasso-vendor.mk)
-
-# Inherit properties
-include $(LOCAL_PATH)/system.prop
-include $(LOCAL_PATH)/product.prop  
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.ims.xml \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.consumerir.xml \
-    frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.wifi.aware.xml \
-    frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.wifi.rtt.xml
-
-PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
 # APN
 #PRODUCT_COPY_FILES += \
 #    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
-
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
-# Overlays -- Override vendor ones
-PRODUCT_PACKAGES += \
-    FrameworksResCommon \
-    FrameworksResTarget \
-    DevicesOverlay \
-    DevicesAndroidOverlay \
-    CarrierConfigResCommon
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
-    vendor/qcom/opensource/commonsys/system/bt/conf
-
-# Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 30
-
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 30
-
-# Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_BUILD_SUPER_PARTITION := false
-PRODUCT_BUILD_PRODUCT_IMAGE := true
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -77,7 +39,8 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    libaacwrapper
+    libaacwrapper \
+    libfmq
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio/audio_policy_configuration.xml \
@@ -100,6 +63,26 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     hardware/interfaces/camera/provider/2.4/default/android.hardware.camera.provider@2.4-service_64.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/android.hardware.camera.provider@2.4-service_64.rc
 
+PRODUCT_PACKAGES += \
+    android.hidl.memory.block@1.0
+
+# Charging
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+
+# Component overrides
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/component-overrides_qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/component-overrides.xml
+
+# Configstore
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.capabilityconfigstore@1.0
+
+# CustomDoze
+PRODUCT_PACKAGES += \
+    CustomDoze
+
 # Display/Graphics
 PRODUCT_PACKAGES += \
     libdisplayconfig \
@@ -116,6 +99,11 @@ PRODUCT_PACKAGES += \
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1 \
+    vendor.xiaomi.hardware.fingerprintextension@1.0
 
 # FM
 PRODUCT_PACKAGES += \
@@ -161,17 +149,45 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.xiaomi_picasso
+
+# Manifests
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/android.hardware.graphics.mapper-impl-qti-display.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
+
+# MIUI ringtones
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/alarms,$(TARGET_COPY_OUT_SYSTEM)/media/audio/alarms) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/ringtones,$(TARGET_COPY_OUT_SYSTEM)/media/audio/ringtones) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/notifications,$(TARGET_COPY_OUT_SYSTEM)/media/audio/notifications) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/ui,$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui)
+
+# Modules
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules-12.1.6,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/lib/modules)
     
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
-    Tag \
     SecureElement
 
-# Overlay - notch style
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    DevicesAndroidOverlay \
+    DevicesOverlay \
+    FrameworksResCommon \
+    FrameworksResTarget \
     NotchNoFillOverlay
+
+# Partitions
+PRODUCT_BUILD_PRODUCT_IMAGE := true
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_CHARACTERISTICS := nosdcard
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Parts
 PRODUCT_PACKAGES += \
@@ -180,14 +196,36 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-parts.xml
 
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.ims.xml \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.consumerir.xml \
+    frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.wifi.aware.xml \
+    frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.wifi.rtt.xml
+
 # Powerstats
 PRODUCT_PACKAGES += \
     android.hardware.power.stats@1.0-service
 
+# Properties
+include $(LOCAL_PATH)/product.prop
+include $(LOCAL_PATH)/system.prop
+include $(LOCAL_PATH)/system_ext.prop
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
 # Ramdisk
 PRODUCT_PACKAGES += \
+    init.mi_thermald.rc \
     init.qcom.rc \
     init.recovery.qcom.rc
+
+# Shipping API level
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
+    vendor/qcom/opensource/commonsys/system/bt/conf
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -211,12 +249,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
 
+# VNDK
+BOARD_VNDK_VERSION := current
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     TelecommResCommon \
     TelephonyResCommon \
     WifiResCommon
+
+# Wi-Fi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/wifi/WCNSS_qcom_cfg.ini
 
 # Wi-Fi Display
 PRODUCT_PACKAGES += \
@@ -234,26 +279,3 @@ PRODUCT_COPY_FILES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0
-
-# Configstore
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.capabilityconfigstore@1.0
-
-# Component overrides
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/component-overrides_qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/component-overrides.xml
-
-# Modules
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules-12.1.6,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/lib/modules)
-
-#miui ringtones
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/alarms,$(TARGET_COPY_OUT_SYSTEM)/media/audio/alarms) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/ringtones,$(TARGET_COPY_OUT_SYSTEM)/media/audio/ringtones) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/notifications,$(TARGET_COPY_OUT_SYSTEM)/media/audio/notifications) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/ui,$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui)
-
-# Manifests
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/android.hardware.graphics.mapper-impl-qti-display.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
