@@ -750,4 +750,7 @@
 
     <!-- Wi-Fi display -->
     <bool name="config_enableWifiDisplay">true</bool>
+
+    <!-- All-rotations overlay -->
+    <bool name="config_allowAllRotations">true</bool>
 </resources>
