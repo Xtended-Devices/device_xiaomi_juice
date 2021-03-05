@@ -1,28 +1,39 @@
-# Set stock DPI
-ro.sf.lcd_density=440
-
 # Aftwd
 persist.vendor.radio.atfwd.start=true
 
 # ART
-pm.dexopt.ab-ota=speed-profile
-dalvik.vm.dex2oat-filter=speed
-dalvik.vm.image-dex2oat-filter=speed
-ro.vendor.qti.am.reschedule_service=true
-ro.sys.fw.dex2oat_thread_count=8
 dalvik.vm.boot-dex2oat-threads=8
-dalvik.vm.dex2oat-threads=4
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.image-dex2oat-filter=speed
 dalvik.vm.image-dex2oat-threads=4
+pm.dexopt.ab-ota=speed-profile
+ro.sys.fw.dex2oat_thread_count=8
+ro.vendor.qti.am.reschedule_service=true
 
-ro.vendor.qti.va_aosp.support=1
+# Battery Property
+ro.charger.enable_suspend = 1
 
-# Zygote
-persist.device_config.runtime_native.usap_pool_enabled=true
+# Bluetooth
+persist.vendor.bt.a2dp.aac_whitelist=false
+ro.bluetooth.library_name=libbluetooth_qti.so
 
-# Netflix
-ro.netflix.bsp_rev=Q7250-19133-1
+# Data modules
+ro.vendor.use_data_netmgrd=true
+persist.vendor.data.mode=concurrent
 
+# DPI
+ro.sf.lcd_density=440
+
+# DPM
 persist.vendor.dpm.feature=11
+
+# Dynamic partitions
+ro.product.property_source_order=odm,vendor,product,system_ext,system
+
+# Fingerprint
+ro.fingerprint.cleanup.unused=false
 
 # GBoard
 ro.com.google.ime.kb_pad_port_l=7
@@ -30,40 +41,27 @@ ro.com.google.ime.kb_pad_port_r=7
 ro.com.google.ime.kb_pad_land_l=14
 ro.com.google.ime.kb_pad_land_r=14
 
+# GPS
+persist.vendor.overlay.izat.optin=rro
+
 # Graphics
-debug.sf.latch_unsignaled=1
 debug.sf.enable_hwc_vds=1
+debug.sf.hw=1
+debug.sf.latch_unsignaled=1
 debug.cpurend.vsync=false
 dev.pm.dyn_samplingrate=1
 ro.opengles.version=196610
 
-# Bringup properties
-persist.sys.force_sw_gles=1
-persist.vendor.radio.atfwd.start=true
-ro.kernel.qemu.gles=0
-qemu.hw.mainkeys=0
+# HWC
+debug.sf.enable_hwc_vds=1
 
-# Partition source order for Product/Build properties pickup.
-ro.product.property_source_order=odm,vendor,product,system_ext,system
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
 
-# Battery Property
-ro.charger.enable_suspend = 1
-
-# Memory optimizations
-ro.vendor.qti.sys.fw.bservice_enable=true
-
-# Subsystem ramdump
-persist.vendor.ssr.restart_level=ALL_ENABLE
-
-# USB debugging
-persist.sys.usb.config=mtp,adb
-ro.adb.secure=0
-ro.secure=0
-ro.debuggable=1
-
-# Netmgr
-persist.vendor.data.iwlan.enable=true
-persist.vendor.data.mode=concurrent
+# Latch unsignaled buffer
+debug.sf.latch_unsignaled=1
 
 # Media
 media.aac_51_output_enabled=true
@@ -83,31 +81,44 @@ persist.vendor.sensors.enable.mag_filter=true
 qcom.hw.aac.encoder=true
 ro.media.recorder-max-base-layer-fps=60
 vendor.mm.enable.qcom_parser=16777215
-
 persist.sys.watchdog_enhanced=true
 dalvik.vm.dexopt.secondary=true
 debug.sf.disable_backpressure=1
 
-config.disable_rtt=true
+# Memory optimizations
+ro.vendor.qti.sys.fw.bservice_enable=true
 
-# Enable HWC for VDS
-debug.sf.enable_hwc_vds=1
+# Misc properties
+persist.sys.force_sw_gles=1
+persist.vendor.radio.atfwd.start=true
+ro.kernel.qemu.gles=0
+qemu.hw.mainkeys=0
 
-# Latch unsignaled buffer
-debug.sf.latch_unsignaled=1
+# Netflix
+ro.netflix.bsp_rev=Q7250-19133-1
 
-# Data modules
-ro.vendor.use_data_netmgrd=true
+# Netmgr
+persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
+
+# OEM unlock
+ro.oem_unlock_supported=0
+
+# Subsystem ramdump
+persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Time-services
 persist.timed.enable=true
 
-# Bluetooth
-persist.vendor.bt.a2dp.aac_whitelist=false
-ro.bluetooth.library_name=libbluetooth_qti.so
+# Vendor
+ro.vendor.qti.va_aosp.support=1
 
-# IMS
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
-persist.dbg.wfc_avail_ovr=1
+# Wi-Fi
+config.disable_rtt=true
+
+# Wi-Fi display
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
+
+# Zygote
+persist.device_config.runtime_native.usap_pool_enabled=true
