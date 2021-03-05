@@ -294,6 +294,7 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessDisplayValuesNits">
+        <item>1</item>
         <item>5</item>
         <item>5</item>
         <item>6</item>
@@ -359,6 +360,7 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
+        <item>1</item>
         <item>2</item>
         <item>4</item>
         <item>7</item>
