@@ -79,7 +79,7 @@
     <bool name="config_device_wfc_ims_available">true</bool>
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
-    <bool name="config_dozeAfterScreenOffDefault">true</bool>
+    <bool name="config_dozeAfterScreenOffDefault">false</bool>
     <!-- Whether UI for multi user should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
     <!-- Is the device capable of hot swapping an UICC Card -->
@@ -137,7 +137,7 @@
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
-    <bool name="config_dozeAfterScreenOffByDefault">false</bool>
+    <bool name="config_dozeAfterScreenOffByDefault">true</bool>
     <!-- Whether the display blanks itself when transitioning from a doze to a non-doze state -->
     <bool name="config_displayBlanksAfterDoze">true</bool>
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
