@@ -1,11 +1,33 @@
 # Audio
 audio.offload.min.duration.secs=30
 
+# Blurs
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
+
 # Camera
 persist.camera.gyro.disable=0
-persist.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
-persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera
+persist.camera.privapp.list=org.codeaurora.snapcam,com.google.android.GoogleCamera,com.android.camera
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.google.android.GoogleCamera,com.android.camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.google.android.GoogleCamera,com.android.camera
+
+# Charger Mode
+ro.charger.enable_suspend=true
+
+# Face unlock
+ro.face.moto_unlock_service.cam_id=5
+
+# Hax
+ro.control_privapp_permissions=log
+
+# LMKD
+ro.config.low_ram = false
+
+# Shutdown
+ro.build.shutdown_timeout=2
+
+# Smart fps switching
+ro.vendor.smart_dfps.enable=false
 
 # Telephony
 ro.telephony.default_network=33,22
@@ -13,15 +35,3 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 persist.sys.fflag.override.settings_network_and_internet_v2=true
-
-# Charger Mode
-ro.charger.enable_suspend=true
-
-# Dex2oat
-dalvik.vm.dex2oat64.enabled=true
-
-# Smart fps switching
-ro.vendor.smart_dfps.enable=false
-
-ro.control_privapp_permissions=log
-
