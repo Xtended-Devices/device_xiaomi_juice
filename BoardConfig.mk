@@ -186,6 +186,7 @@ TARGET_USES_MKE2FS := true
 
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT
 
 # Sepolicy
 include device/qcom/sepolicy/SEPolicy.mk
