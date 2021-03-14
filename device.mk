@@ -22,10 +22,6 @@ $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# APN
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
@@ -65,11 +61,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0
-
-# Charging
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    product_charger_res_images
 
 # Component overrides
 PRODUCT_COPY_FILES += \
