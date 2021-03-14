@@ -7,7 +7,7 @@
     <string name="legion_chipset_type_summary">Qualcomm Snapdragon 765G</string>
     <string name="legion_gpu_summary">Adreno 620</string>
     <string name="legion_camera_mp_summary">64+8+5+2</string>
-    <string name="legion_screen_type_summary">IPS 120hz</string>
+    <string name="legion_screen_type_summary">IPS 120hz LCD</string>
 
     <!-- legion About Maintainer Info -->
     <string name="legion_maintainer_name">masemoel</string>
