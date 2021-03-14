@@ -110,6 +110,9 @@ ifeq ($(HOST_OS),linux)
         endif
     endif
 endif
+DONT_DEXPREOPT_PREBUILTS := true
+USE_DEX2OAT_DEBUG := false
+WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Display
 TARGET_USES_HWC2 := true
