@@ -736,9 +736,6 @@
         <item>GM_3:GM 3</item>
     </string-array>
 
-    <!-- Should we filter any display modes which are unampped? -->
-    <bool name="config_filterDisplayModes">true</bool>
-
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
     <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/bms/uevent</string>
 
@@ -781,11 +778,6 @@
     <!-- Display has physical cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
 
-    <!-- Whether the display cutout region of the main built-in display should be forced to
-         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
-     -->
-    <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
-
     <!-- If set, this will force all windows to draw the status bar background, including the apps
          that have not requested doing so (via the WindowManager.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS
          flag). -->
@@ -818,9 +810,6 @@
          For this time after the screen turns on, the Power Manager
          will not debounce light sensor readings -->
     <integer name="config_lightSensorWarmupTime">200</integer>
-
-    <!-- Flag indicating which package name can access the persistent data partition -->
-    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- SystemInfo Sys Nodes -->
     <integer name="config_sysCPUTempMultiplier">1000</integer>
