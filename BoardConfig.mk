@@ -69,10 +69,6 @@ BOARD_USES_QCOM_HARDWARE := true
 # A/B status
 AB_OTA_UPDATER := false
 
-# AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
