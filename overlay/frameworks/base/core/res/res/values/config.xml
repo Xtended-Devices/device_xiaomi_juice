@@ -841,6 +841,5 @@
         <item>restart_fastboot</item>
         <item>restart_bootloader</item>
         <item>restart_systemui</item>
-        <item>restart_edl</item>
     </string-array>
 </resources>
