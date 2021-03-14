@@ -22,12 +22,6 @@
     <!-- Device specific doze package -->
     <string name="config_customDozePackage">com.custom.ambient.display/com.custom.ambient.display.DozeSettings</string>
 
-    <!-- Battery Health -->
-    <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
-    <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
-    <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
-    <bool name="config_supportBatteryHealth">false</bool>
-
     <!-- Smart Charging -->
     <bool name="config_supportSmartCharging">true</bool>
 
