@@ -116,4 +116,5 @@
     <allow-in-power-save package="com.qualcomm.location" />
     <allow-in-power-save package="com.qualcomm.location.XT" />
     <hidden-api-whitelisted-app package="com.qti.service.colorservice" />
+    <allow-implicit-broadcast action="android.intent.action.DROPBOX_ENTRY_ADDED" />
 </config>
