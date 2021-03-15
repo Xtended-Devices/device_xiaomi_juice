@@ -1,1 +1,10 @@
 allow gmscore_app hal_memtrack_hwservice:hwservice_manager find;
+allow gmscore_app init_exec:lnk_file { getattr };
+allow gmscore_app mirror_data_file:dir { getattr };
+allow gmscore_app metadata_file:dir { getattr };
+allow gmscore_app postinstall_mnt_dir:dir { getattr };
+allow gmscore_app linkerconfig_file:dir { getattr };
+allow gmscore_app sepolicy_file:dir { getattr };
+allow gmscore_app cache_private_backup_file:dir { getattr };
+allow gmscore_app mnt_sdcard_file:lnk_file { getattr };
+allow gmscore_app mnt_pass_through_file:dir { getattr };
