@@ -1,6 +1,6 @@
 ![Legion](https://forum.xda-developers.com/proxy.php?image=https%3A%2F%2Fraw.githubusercontent.com%2FlegionRom%2Fxda_templete%2Fmaster%2Flogos%2FPicsArt_05-31-07.22.49.jpg&hash=b402290007e6c056ee0fec410a2bb84e "Legion")
 
-LegionOS 3.6 (A11/R) for Redmi K30 5G (picasso)
+LegionOS 3.7 (A11/R) for Redmi K30 5G (picasso)
 ======================================
 
 # How to build
