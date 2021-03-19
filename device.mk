@@ -22,6 +22,10 @@ $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+PRODUCT_CHARACTERISTICS := nosdcard
+PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_TARGET_VNDK_VERSION := 30
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
@@ -176,7 +180,6 @@ PRODUCT_PACKAGES += \
 # Partitions
 PRODUCT_BUILD_PRODUCT_IMAGE := true
 PRODUCT_BUILD_SUPER_PARTITION := false
-PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Parts
@@ -209,9 +212,6 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc
 
-# Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 29
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/picasso \
@@ -240,9 +240,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
 
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 30
-
 # Wi-Fi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
@@ -250,7 +247,6 @@ PRODUCT_PACKAGES += \
     TelephonyResCommon \
     WifiResCommon
 
-# Wi-Fi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/wifi/WCNSS_qcom_cfg.ini
 
