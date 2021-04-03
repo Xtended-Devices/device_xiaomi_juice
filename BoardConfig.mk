@@ -141,8 +141,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 HWUI_COMPILE_FOR_PERF := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_bengal
-TARGET_RECOVERY_DEVICE_MODULES := libinit_bengal
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_juice
+TARGET_RECOVERY_DEVICE_MODULES := libinit_juice
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144

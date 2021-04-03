@@ -14,12 +14,12 @@
 // limitations under the License.
 //
 cc_library_static {
-    name: "libinit_picasso",
-    srcs: ["init_picasso.cpp"],
+    name: "libinit_juice",
+    srcs: ["init_lime.cpp"],
     recovery_available: true,
+    whole_static_libs: ["libbase"],
     include_dirs: [
         "system/core/base/include",
-        "system/core/init",
-    ],
-    shared_libs: ["libbase"],
+        "system/core/init"
+    ]
 }
