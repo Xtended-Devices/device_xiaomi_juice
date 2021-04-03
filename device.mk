@@ -148,13 +148,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/android.hardware.graphics.mapper-impl-qti-display.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
 
-# MIUI ringtones
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/alarms,$(TARGET_COPY_OUT_SYSTEM)/media/audio/alarms) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/ringtones,$(TARGET_COPY_OUT_SYSTEM)/media/audio/ringtones) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/notifications,$(TARGET_COPY_OUT_SYSTEM)/media/audio/notifications) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/ui,$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui)
-
 # Modules
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/lib/modules)
