@@ -142,7 +142,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.xiaomi_juice
+    android.hardware.light@2.0-service.xiaomi_juice
 
 # Manifests
 PRODUCT_COPY_FILES += \
