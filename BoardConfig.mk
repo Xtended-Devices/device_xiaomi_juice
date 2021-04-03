@@ -6,7 +6,7 @@
 #
 
 BOARD_VENDOR := xiaomi
-DEVICE_PATH := device/xiaomi/picasso
+DEVICE_PATH := device/xiaomi/juice
 BUILD_BROKEN_DUP_RULES := true
 
 # Architecture
@@ -27,10 +27,10 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 TARGET_USES_64_BIT_BINDER := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := picasso
+TARGET_OTA_ASSERT_DEVICE := lime, citrus, lemon, pomelo
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := lito
+TARGET_BOOTLOADER_BOARD_NAME := bengal
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
@@ -63,8 +63,8 @@ BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE) --board ""
 
 # Platform
-TARGET_BOARD_PLATFORM := lito
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno620
+TARGET_BOARD_PLATFORM := bengal
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno610
 BOARD_USES_QCOM_HARDWARE := true
 
 # A/B status
@@ -130,8 +130,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 HWUI_COMPILE_FOR_PERF := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_picasso
-TARGET_RECOVERY_DEVICE_MODULES := libinit_picasso
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_bengal
+TARGET_RECOVERY_DEVICE_MODULES := libinit_bengal
 
 # Partitions
 TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS := true
@@ -201,4 +201,4 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 BOARD_VNDK_VERSION := current
 
 # Inherit from the proprietary version
-include vendor/xiaomi/picasso/BoardConfigVendor.mk
+include vendor/xiaomi/juice/BoardConfigVendor.mk

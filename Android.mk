@@ -7,7 +7,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter picasso,$(TARGET_DEVICE)),)
+ifneq ($(filter lemon pomelo citrus lime,$(TARGET_DEVICE)),)
   subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
   $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
 
