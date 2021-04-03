@@ -202,9 +202,10 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 
 # Sepolicy
-include device/qcom/sepolicy/SEPolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+#include device/qcom/sepolicy/SEPolicy.mk
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-minimal
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Verified Boot
