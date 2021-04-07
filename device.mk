@@ -128,6 +128,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     org.ifaa.android.manager
+	
+# Init scripts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -201,9 +205,7 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.mi_thermald.rc \
-    init.qcom.rc \
-    init.recovery.qcom.rc
+    init.target.rc
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
