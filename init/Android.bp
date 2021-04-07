@@ -15,7 +15,7 @@
 //
 cc_library_static {
     name: "libinit_juice",
-    srcs: ["init_lime.cpp"],
+    srcs: ["init_juice.cpp"],
     recovery_available: true,
     whole_static_libs: ["libbase"],
     include_dirs: [
