@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2006, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,13 +15,7 @@
  * limitations under the License.
 */
 -->
-<intent-filter>
-    <action android:name="com.android.settings.device.DOZE_SETTINGS" />
-    <category android:name="android.intent.category.DEFAULT" />
-</intent-filter>
-
 <resources>
-    <!-- Defines the custom proximity sensor used by various OEMs like OnePlus-->
-    <string name="config_custom_tilt">xiaomi.sensor.pickup</string>
-    <string name="config_custom_proximity">xiaomi.sensor.proxmity</string>
+    <!-- Adjust the icon padding in status bar for rounded corners --> 
+    <dimen name="rounded_corner_content_padding">7.0dip</dimen>
 </resources>
