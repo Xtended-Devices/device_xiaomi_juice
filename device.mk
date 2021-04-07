@@ -96,7 +96,6 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1 \
     vendor.xiaomi.hardware.fingerprintextension@1.0
 
 # FM
