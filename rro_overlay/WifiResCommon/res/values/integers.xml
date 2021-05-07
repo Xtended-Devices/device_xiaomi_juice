@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Integer indicating maximum hardware supported client number of soft ap -->
     <integer name="config_wifiHardwareSoftapMaxClientCount">32</integer>
-    <!-- Integer delay in milliseconds before set wlan interface up during watchdog recovery -->
-    <integer name="config_wifi_framework_recovery_timeout_delay">3000</integer>
 </resources>
