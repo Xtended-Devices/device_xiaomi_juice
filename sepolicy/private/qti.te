@@ -1,2 +1,0 @@
-type vendor_qti, domain;
-dontaudit vendor_qti vendor_diag_device:chr_file rw_file_perms;

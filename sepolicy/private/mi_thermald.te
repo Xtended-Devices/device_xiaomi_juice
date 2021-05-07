@@ -1,3 +1,0 @@
-type mi_thermald, domain;
-get_prop(mi_thermald, vendor_default_prop)
-set_prop(mi_thermald, vendor_default_prop)

@@ -1,7 +1,0 @@
-allow untrusted_app_29 hal_memtrack_hwservice:hwservice_manager { find };
-get_prop(untrusted_app_29, vendor_fp_prop)
-get_prop(untrusted_app_29, vendor_payment_security_prop)
-
-# Alipay Fingerprint
-type payment_security_prop;
-allow untrusted_app_29 payment_security_prop:file { read open getattr map };

@@ -1,3 +1,0 @@
-type vendor_hvdcp, domain;
-allow vendor_hvdcp kmsg_device:chr_file rw_file_perms;
-

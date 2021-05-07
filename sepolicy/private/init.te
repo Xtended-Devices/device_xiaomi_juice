@@ -1,19 +1,11 @@
+# Allow init to bind mount over vendor file
+allow init vendor_file:file mounton;
+
 # Allow init to mount vendor configs
 allow init vendor_configs_file:dir mounton;
-allow init vendor_configs_file:file mounton;
 
 # Allow init to mount vendor overlay
 allow init vendor_overlay_file:dir mounton;
 
-# Allow init to write to sysfs
-allow init sysfs_battery_supply:file setattr;
-allow init sysfs_devices_system_cpu:file w_file_perms;
-allow init sysfs_dm:file setattr;
-allow init sysfs_graphics:file setattr;
-allow init sysfs_memory:file setattr;
-
-allow init hal_fingerprint:process ptrace;
-allow init debugfs_tracing_debug:dir mounton;
-
-# Allow init to write to sysfs_battery_supply
-allow init sysfs_battery_supply:file { setattr };
+# Allow init to write to sysfs_graphics
+allow init sysfs_graphics:file w_file_perms;

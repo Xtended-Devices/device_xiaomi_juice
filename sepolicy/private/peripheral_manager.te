@@ -1,3 +1,0 @@
-type vendor_per_mgr, domain;
-
-allow vendor_per_mgr vendor_debugfs_ipc:dir search;
