@@ -76,9 +76,7 @@ void vendor_load_properties() {
         set_ro_build_prop(source, "fingerprint",
                           "xiaomi/lime_global/lime:10/QKQ1.200830.002/V12.0.3.0.QJFMIXM:user/release-keys");
         set_ro_product_prop(source, "brand", "Xiaomi");
-        set_ro_product_prop(source, "device", "citrus / lime");
+        set_ro_product_prop(source, "device", "juice");
         set_ro_product_prop(source, "model", "POCO M3 / Redmi 9T");
     }
-    property_override("ro.build.fingerprint", "xiaomi/lime_global/lime:10/QKQ1.200830.002/V12.0.3.0.QJFMIXM:user/release-keys");
-    property_override("ro.build.description", "lime-user 10 QKQ1.200830.002 V12.0.3.0.QJFMIXM release-keys");
 }
