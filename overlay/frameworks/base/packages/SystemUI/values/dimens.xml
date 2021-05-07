@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
  * Copyright (c) 2006, The Android Open Source Project
  *
@@ -15,7 +16,9 @@
  * limitations under the License.
 */
 -->
+
 <resources>
     <!-- Adjust the icon padding in status bar for rounded corners --> 
-    <dimen name="rounded_corner_content_padding">7.0dip</dimen>
+    <dimen name="rounded_corner_content_padding">26px</dimen>
+	<dimen name="rounded_corner_radius">45px</dimen>
 </resources>
