@@ -187,7 +187,7 @@ PRODUCT_PACKAGES += \
 include $(LOCAL_PATH)/product.prop
 include $(LOCAL_PATH)/system.prop
 include $(LOCAL_PATH)/system_ext.prop
-include $(LOCAL_PATH)/vendor_props.mk
+include $(LOCAL_PATH)/vendor.prop
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Ramdisk
