@@ -129,12 +129,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     org.ifaa.android.manager
-	
-# Init scripts
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.sh:recovery/root/init.recovery.qcom.sh \
-    $(LOCAL_PATH)/rootdir/etc/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -189,11 +183,6 @@ include $(LOCAL_PATH)/system.prop
 include $(LOCAL_PATH)/system_ext.prop
 include $(LOCAL_PATH)/vendor.prop
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
-# Ramdisk
-PRODUCT_PACKAGES += \
-    init.target.rc \
-	init.recovery.qcom.rc
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
