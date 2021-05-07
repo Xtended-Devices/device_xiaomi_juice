@@ -38,13 +38,18 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    libaacwrapper
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.service \
+    vendor.qti.hardware.audiohalext@1.0 \
+    vendor.qti.hardware.audiohalext-utils
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/audio_policy_engine_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_engine_configuration.xml
+PRODUCT_PACKAGES += \
+    audio.a2dp.default
+
+PRODUCT_PACKAGES += \
+    tinymix \
+    libaudio-resampler
 
 # Bluetooth
 PRODUCT_PACKAGES += \
