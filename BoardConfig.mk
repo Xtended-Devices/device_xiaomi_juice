@@ -99,6 +99,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 TARGET_USE_QTI_BT_STACK := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
+include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
 
 # Camera
 TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
@@ -232,3 +233,6 @@ BOARD_VNDK_VERSION := current
 
 # Inherit from the proprietary version
 include vendor/xiaomi/juice/BoardConfigVendor.mk
+
+# Inherit QTI Bluetooth
+$(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
