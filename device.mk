@@ -184,6 +184,11 @@ include $(LOCAL_PATH)/system_ext.prop
 include $(LOCAL_PATH)/vendor.prop
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
+# Sensors
+PRODUCT_PACKAGES += \
+    libsensorndkbridge \
+    android.hardware.sensors@2.0-service.multihal
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/juice \
