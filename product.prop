@@ -36,6 +36,13 @@ ro.control_privapp_permissions=log
 # LMKD
 ro.config.low_ram = false
 
+# Power-saving props
+ro.vendor.use_data_netmgrd=true
+ro.vold.umsdirtyratio=20
+ro.ril.disable.power.collapse=0
+power.saving.mode=1
+pm.sleep_mode=1
+
 # Shutdown
 ro.build.shutdown_timeout=2
 
