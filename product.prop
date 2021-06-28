@@ -12,6 +12,9 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.google.android.GoogleCa
 # Charger Mode
 ro.charger.enable_suspend=true
 
+# Dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
 # DRM
 drm.service.enabled=true
 
