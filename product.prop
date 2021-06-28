@@ -25,6 +25,9 @@ ro.charger.enable_suspend=true
 # Face unlock
 ro.face.moto_unlock_service.cam_id=5
 
+# Graphics
+debug.hwui.renderer=skiavk
+
 # Hax
 ro.control_privapp_permissions=log
 
