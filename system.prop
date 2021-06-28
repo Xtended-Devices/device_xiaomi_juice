@@ -107,7 +107,7 @@ ro.kernel.qemu.gles=0
 qemu.hw.mainkeys=0
 
 # Netflix
-ro.netflix.bsp_rev=Q7250-19133-1
+ro.netflix.bsp_rev=Q660-13149-1
 
 # Netmgr
 persist.vendor.data.iwlan.enable=true
