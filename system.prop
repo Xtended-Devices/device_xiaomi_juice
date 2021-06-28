@@ -119,6 +119,9 @@ ro.oem_unlock_supported=0
 # Subsystem ramdump
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# Scroll optimization
+ro.vendor.perf.scroll_opt=true
+
 # Time-services
 persist.timed.enable=true
 
