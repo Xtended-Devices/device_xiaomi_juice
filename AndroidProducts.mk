@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_juice.mk
+    $(LOCAL_DIR)/xtended_juice.mk
 	
 COMMON_LUNCH_CHOICES := \
-    lineage_juice-user \
-    lineage_juice-userdebug \
-    lineage_juice-eng
+    xtended_juice-user \
+    xtended_juice-userdebug \
+    xtended_juice-eng
